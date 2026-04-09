@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
 
 body {
@@ -30,10 +31,23 @@ body {
 .head_flex_right a {
     padding: 10px 40px;
     text-decoration: none;
-    color: white;
+    border-radius: 20px;
+    transition: 1.5s;
+}
+
+.head_flex_right a:hover {
+    background-color: gray;
+    transition: 0.5s;
 }
 
 .head_page_selected {
     background-color: rgb(64, 64, 64);
-    border-radius: 20px;
+}
+
+section {
+    margin-left: 40px;
+}
+
+input {
+    background-color: black;
 }
