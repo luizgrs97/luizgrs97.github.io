@@ -14,9 +14,36 @@ body {
     background-color: rgb(24, 24, 24);
 }
 
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  object-fit: cover;
+}
+
+/*body {
+    background-image: grad;
+    background-image: url("https://wallpapers.com/images/hd/dark-city-photo-c197i2r1szj5h0y7.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}*/
+
 p {
     text-align: justify;
     text-indent: 30px;
+}
+
+section {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.60);
 }
 
 @media (max-width: 767px){
@@ -24,10 +51,7 @@ p {
         display: none;
     }  
     section {
-        flex: 1;
-        padding: 50px 0;
-        margin-left: 20px;
-        margin-right: 20px;
+        padding: 50px 20px;
     }
     section img {
         display: block;
@@ -44,11 +68,9 @@ p {
         display: none;
     }
     section {
-        flex: 1;
         margin-left: 25%;
         margin-right: 25%;
         padding: 50px;
-        background-color: rgba(0, 0, 0, 0.30);
         overflow: hidden;
     }
     section img {
@@ -147,7 +169,7 @@ table.servicos  {
     border-collapse: collapse;
 }
 
-.servicos th, .servicos td {
+.servicos tr, .servicos th, .servicos td {
     border: 1px solid white;
     padding: 5px 30px 5px 10px;
 }
@@ -166,11 +188,17 @@ form div {
 }
 
 label span {
-    color: red
+    color: red;
 }
 
 input, select, textarea {
     background-color: black;
+}
+
+@media (max-width: 767px){
+    input[type=time] {
+        width:100%
+    }
 }
 
 input:not([type=radio],[type=time],[type=submit],[type=reset]), textarea {
