@@ -54,17 +54,19 @@ header nav span a {
     margin: 0 auto;
 }
 
+form div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    white-space: nowrap;
+}
+
 label span {
     color: red
 }
 
 input, select, textarea {
     background-color: black;
-}
-
-form div {
-    display: flex;
-    white-space: nowrap;
 }
 
 input:not([type=radio],[type=time],[type=submit],[type=reset]), textarea {
