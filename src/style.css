@@ -85,23 +85,32 @@ header {
     filter: invert(100%);
 }
 
+@media (max-width: 767px){
+    header nav {
+        grid-template-columns: 1fr 1fr;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 768px){
+    header nav {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin-right: 80px;
+    }
+}
+
 header nav {
-    /*
     display: grid;
-    grid-template-columns: repeat(2, 100px);
-    */
-    margin-left: 80px;
-    margin-right: 80px;
-    gap: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    margin-left: 10x;
+    gap: 5px 10px;
 }
 
 header nav a {
-    padding: 5px 20px;
+    display: flex;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
     border-radius: 20px;
 }
 
