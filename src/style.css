@@ -161,8 +161,8 @@ table.servicos  {
 }
 
 .servicos tr, .servicos th, .servicos td {
-    border: 1px solid white;
-    padding: 5px 30px 5px 10px;
+    border: 1px , white;
+    padding: 5px 20px 5px 10px;
 }
 
 /* Contato */
