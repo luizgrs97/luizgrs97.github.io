@@ -15,26 +15,16 @@ body {
 }
 
 #bg-video {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -1000;
-  object-fit: cover;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    min-width: 100%; 
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    object-fit: cover;
 }
-
-/*body {
-    background-image: grad;
-    background-image: url("https://wallpapers.com/images/hd/dark-city-photo-c197i2r1szj5h0y7.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-}*/
 
 p {
     text-align: justify;
@@ -43,7 +33,7 @@ p {
 
 section {
     flex: 1;
-    background-color: rgba(0, 0, 0, 0.60);
+    background-color: rgba(12, 12, 12, 0.75);
 }
 
 @media (max-width: 767px){
@@ -71,7 +61,8 @@ section {
         margin-left: 25%;
         margin-right: 25%;
         padding: 50px;
-        overflow: hidden;
+        border-left: 1px solid gray;
+        border-right: 1px solid gray;
     }
     section img {
         display: block;
