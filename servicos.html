@@ -9,15 +9,66 @@
 </head>
 <body>
     <header>
-        <div><img src="./src/assets/logo.png" alt="logo" style="max-width: 40px;"></div>
+        <img src="./src/assets/logo.png" alt="logo" class="logo">
         <nav>
             <a href="./index.html">Home</a>
             <a href="./curriculo.html">Currículo</a>
-            <a href="./github.html">Github</a>
             <span><a href="./servicos.html">Serviços</a></span>
             <a href="./contato.html">Contato</a>
         </nav>
+        <a href="https://github.com/luizgrs97" rel="external" target="_blank"><img src="./src/assets/github.png" alt="Github logo" class="git"></a>
     </header>
     <hr style="margin: 0; border-color: gray;">
+    <section class="servicos">
+        <h1>Preço dos Serviços:</h1>
+        <table class="servicos">
+            <thead>
+                <thead>
+                    <tr style="border: 0px none;">
+                        <th style="border: 0px none;"></th>
+                        <th>Serviço</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="4" style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; padding: 10px 5px;"><strong>Projeto</strong></td>
+                        <td>Elétrico</td>
+                        <td>9 R$/m²</td>
+                    </tr>
+                    <tr>
+                        <td>Cabeamento</td>
+                        <td>3 R$/m²</td>
+                    </tr>
+                    <tr>
+                        <td>Segurança</td>
+                        <td>4 R$/m²</td>
+                    </tr>
+                    <tr>
+                        <td>Solar</td>
+                        <td>100 R$/kW</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" style="writing-mode: vertical-rl; transform: rotate(180deg); text-align: center; padding: 10px 5px;"><strong>Homepage</strong></td>
+                        <td>Estático</td>
+                        <td>A definir</td>
+                    </tr>
+                    <tr>
+                        <td>Dinâmico</td>
+                        <td>A definir</td>
+                    </tr>
+                    <tr>
+                        <td>Avançado</td>
+                        <td>A definir</td>
+                    </tr>
+                </tbody>
+            </thead>
+        </table>
+    </section>
+    <hr style="margin: 0; border-color: gray;">
+    <footer>
+        <p style="text-align: center;"><span id="ano"></span> - LG Ribeiro</p>
+    </footer>
+    <script src="./src/script.js"></script>
 </body>
 </html>
