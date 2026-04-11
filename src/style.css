@@ -17,7 +17,7 @@ body {
 #bg-video {
     position: fixed;
     top: 0;
-    right: 0%;
+    right: 0;
     min-width: 100%; 
     min-height: 100%;
     width: auto;
@@ -29,6 +29,15 @@ body {
 p {
     text-align: justify;
     text-indent: 30px;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
 }
 
 section {
@@ -43,7 +52,7 @@ section {
     section {
         padding: 50px 20px;
     }
-    section img {
+    img.mobile {
         display: block;
         width: 50%;
         border: 1px solid white;
@@ -64,15 +73,16 @@ section {
         border-left: 1px solid gray;
         border-right: 1px solid gray;
     }
-    section img {
+    img.desktop {
         display: block;
         float: right;
         border: 1px solid white;
+        border-radius: 10%;
         width: 25%;
         object-fit: contain;
         align-self: flex-start;
-        margin-left: 2%;
-        margin-bottom: 2%;
+        margin-left: 3%;
+        margin-bottom: 3%;
     }
 }
 
