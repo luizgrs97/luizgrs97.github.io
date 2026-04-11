@@ -1,0 +1,100 @@
+@import url('https://googleapis.com');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(24, 24, 24);
+}
+
+section {
+    margin-left: 40px;
+}
+
+/* Navbar */
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    padding: 5px;
+}
+
+header div {
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+header nav {
+    gap: 5px;
+    margin-right: 80px;
+}
+
+header nav a {
+    padding: 10px 40px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+header nav a:hover {
+    background-color: gray;
+    transition: 0.5s;
+}
+
+header nav span a {
+    background-color: rgb(64, 64, 64);
+}
+
+/* Contato */
+
+#contato {
+    margin: 0 auto;
+}
+
+label span {
+    color: red
+}
+
+input, select, textarea {
+    background-color: black;
+}
+
+form div {
+    display: flex;
+    white-space: nowrap;
+}
+
+input:not([type=radio],[type=time],[type=submit],[type=reset]), textarea {
+    width: 100%
+}
+
+input[placeholder]:not(:placeholder-shown):invalid {
+  border: 2px solid darkred;
+}
+
+input[placeholder]:not(:placeholder-shown):valid {
+  border: 2px solid darkgreen;
+}
+
+input:is(:-webkit-autofill, :autofill) {
+  border: 1px solid gray;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0 1000px black inset !important;
+  background-color: black !important;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+input[type="submit"], input[type="reset"] {
+    padding: 8px;
+}
+
+input:hover, select:hover, textarea:hover {
+    background-color: rgb(32, 32, 32);
+    transition: 0.5s;
+}
