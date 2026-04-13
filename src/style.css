@@ -226,7 +226,7 @@ input:not([type=radio],[type=time],[type=submit],[type=reset]), textarea {
     width: 100%
 }
 
-input[placeholder]:not(:placeholder-shown, :-webkit-autofil):invalid {
+input[placeholder]:not(:placeholder-shown):invalid {
     border: 2px inset darkred;
 }
 
