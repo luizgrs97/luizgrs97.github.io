@@ -1,4 +1,3 @@
-
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.querySelector("main").classList.add("transition");
