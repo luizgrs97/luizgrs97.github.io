@@ -1,3 +1,7 @@
+window.addEventListener('load', function() {
+    document.querySelector('body').style.display = 'flex';
+});
+
 window.addEventListener("load", () => {
     setTimeout(() => {
         document.querySelector("main").classList.add("transition");
