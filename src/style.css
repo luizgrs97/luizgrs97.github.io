@@ -234,7 +234,7 @@ input[placeholder]:not(:placeholder-shown):valid {
     border: 2px inset green;
 }
 
-input:is(:-webkit-autofill) {
+input:-webkit-autofill {
     border: 2px inset gray;
     -webkit-text-fill-color: white;
     -webkit-box-shadow: 0 0 0 1000px black inset !important;
