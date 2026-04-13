@@ -71,6 +71,8 @@ button.visible {
     }  
     main {
         padding: 50px 20px;
+        border-left: 1px none gray;
+        border-right: 1px none gray;
     }
     img.mobile {
         display: block;
