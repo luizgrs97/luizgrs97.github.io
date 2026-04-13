@@ -226,16 +226,16 @@ input:not([type=radio],[type=time],[type=submit],[type=reset]), textarea {
     width: 100%
 }
 
-input[placeholder]:not(:placeholder-shown):invalid {
-    border: 2px solid darkred;
+input[placeholder]:not(:placeholder-shown, :-webkit-autofil):invalid {
+    border: 2px inset darkred;
 }
 
 input[placeholder]:not(:placeholder-shown):valid {
-    border: 2px solid darkgreen;
+    border: 2px inset green;
 }
 
-input:is(:-webkit-autofill, :autofill) {
-    border: 1px solid gray;
+input:is(:-webkit-autofill) {
+    border: 2px inset gray;
     -webkit-text-fill-color: white;
     -webkit-box-shadow: 0 0 0 1000px black inset !important;
     background-color: black !important;
