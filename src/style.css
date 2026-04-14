@@ -3,6 +3,11 @@
     color: white;
 }
 
+img,
+video {
+    user-select: none;
+}
+
 body {
     display: none;
     flex-direction: column;
@@ -56,10 +61,6 @@ section.visible {
     animation: fade 1s ease forwards;
 }
 
-button.visible {
-    background-color: rgb(64, 64, 64);
-}
-
 @keyframes fade {
     from {opacity:0; transform: translateY(0.5em);}
     to {opacity:1; transform: translateY(0);}
@@ -110,61 +111,69 @@ button.visible {
 /* Navbar */
 
 header {
-    display: flex;
-    align-items: center;
-    background-color: black;
-    padding: 5px;
-}
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(2.5px);
 
-.logo {
-    max-height: 40px;
-    margin-left: 10px;
-    margin-right: auto;
-}
+    div {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
 
-.git {
-    max-height: 30px;
-    margin-right: 20px;
-    margin-left: auto;
-    filter: invert(100%);
-}
-
-@media (max-width: 767px){
-    header nav {
-        grid-template-columns: 1fr 1fr;
+    .logo {
+        max-height: 40px;
+        margin-left: 10px;
         margin-right: auto;
     }
-}
 
-@media (min-width: 768px){
-    header nav {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        margin-right: 80px;
+    .git {
+        max-height: 30px;
+        margin-right: 20px;
+        margin-left: auto;
+        filter: invert(100%);
     }
-}
 
-header nav {
-    display: grid;
-    margin-left: 10x;
-    gap: 5px 10px;
-}
+    @media (max-width: 767px){
+        div nav {
+            grid-template-columns: 1fr 1fr;
+            margin-right: auto;
+        }
+    }
 
-header nav button {
-    background-color: black;
-    border: none;
-    border-radius: 20px;
-    font-size: 1em;
-    text-decoration: none;
-    padding: 5px 10px;
-}
+    @media (min-width: 768px){
+        div nav {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            margin-right: 80px;
+        }
+    }
 
-header nav button:hover {
-    background-color: gray;
-    transition: 0.5s;
-}
+    div nav {
+        display: grid;
+        margin-left: 10x;
+        gap: 5px 10px;
+    }
 
-header nav span button {
-    background-color: rgb(64, 64, 64);
+    div nav button {
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        border-radius: 20px;
+        font-size: 1em;
+        text-decoration: none;
+        padding: 5px 10px;
+    }
+
+    button.visible {
+        background-color: rgba(64, 64, 64, 0.5);
+    }
+
+    div nav button:hover {
+        background-color: rgba(128, 128, 128, 0.5);
+        transition: 0.5s;
+    }
 }
 
 /* Rodapé */
@@ -226,19 +235,19 @@ input:not([type=radio],[type=time],[type=submit],[type=reset]), textarea {
     width: 100%
 }
 
+input:-webkit-autofill {
+    border: 2px inset gray;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0 1000px black inset !important;
+    background-color: black !important;
+}
+
 input[placeholder]:not(:placeholder-shown):invalid {
     border: 2px inset darkred;
 }
 
 input[placeholder]:not(:placeholder-shown):valid {
     border: 2px inset green;
-}
-
-input:-webkit-autofill {
-    border: 2px inset gray;
-    -webkit-text-fill-color: white;
-    -webkit-box-shadow: 0 0 0 1000px black inset !important;
-    background-color: black !important;
 }
 
 input[type="time"]::-webkit-calendar-picker-indicator {

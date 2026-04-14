@@ -9,13 +9,17 @@ window.addEventListener("load", () => {
 });
 
 function turn(btn_id, sec_id) {
-    document.querySelectorAll("section, button").forEach(element => {
-        element.classList.remove("visible");
-    });
-    btn_id.classList.add("visible");
-    document.getElementById(sec_id).classList.add("visible");
-    localStorage.setItem("LastSection", sec_id);
-}
+	document.querySelectorAll("section, button").forEach(element => {
+		element.classList.remove("visible");
+	});
+	btn_id.classList.add("visible");
+	document.getElementById(sec_id).classList.add("visible");
+	localStorage.setItem("LastSection", sec_id);
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	});
+};
 
 window.onload = () => {
     section = localStorage.getItem("LastSection");
@@ -30,16 +34,16 @@ hoje = new Date();
 idade = hoje.getFullYear() - 2003;
 if ( hoje.getMonth() < 6 || ( hoje.getMonth() == 6 && hoje.getDate() < 9 )) {
     idade--;
-}
+};
 id_idade = document.getElementById("idade")
 if (id_idade) {
     id_idade.textContent = idade;
-}
+};
 
 var ano = hoje.getFullYear();
 if (ano) {
 document.getElementById("ano").textContent = ano;
-}
+};
 
 const textarea = document.querySelector("textarea");
 

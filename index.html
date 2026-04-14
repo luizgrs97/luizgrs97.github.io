@@ -12,16 +12,18 @@
 </head>
 <body>
     <header>
-        <img src="./src/assets/logo.png" alt="logo" class="logo">
-        <nav>
-            <button onclick="turn(this, 'home')" class="visible">Home</button>
-            <button onclick="turn(this, 'curriculo')" class>Currículo</button>
-            <button onclick="turn(this, 'servicos')" class>Serviços</button>
-            <button onclick="turn(this, 'contato')" class>Contato</button>
-        </nav>
-        <a href="https://github.com/luizgrs97" rel="external" target="_blank"><img src="./src/assets/github.png" alt="Github logo" class="git"></a>
+        <div>
+            <img src="./src/assets/logo.png" alt="logo" class="logo">
+            <nav>
+                <button onclick="turn(this, 'home')" class="visible">Home</button>
+                <button onclick="turn(this, 'portfolio')" class>Portfólio</button>
+                <button onclick="turn(this, 'servicos')" class>Serviços</button>
+                <button onclick="turn(this, 'contato')" class>Contato</button>
+            </nav>
+            <a href="https://github.com/luizgrs97" rel="external" target="_blank"><img src="./src/assets/github.png" alt="Github logo" class="git"></a>
+        </div>
+        <hr style="margin: 0; border-color: gray;">
     </header>
-    <hr style="margin: 0; border-color: gray;">
     <video autoplay muted loop disablePictureInPicture id="bg-video">
         <source src="./src/assets/night.mp4" type="video/mp4">
     </video>
@@ -51,7 +53,7 @@
                 </div>
             </div>
         </section>
-        <section id="curriculo" class>
+        <section id="portfolio" class>
             <h1 style="margin-top: 0;">Minhas Experiências</h1>
             <p>Com dois anos de experiência, atuo no desenvolvimento de projetos elétricos, cabeamento estruturado, sistemas de segurança e energia solar. Meu portfólio abrange desde residências até obras de grande complexidade, como praças, escolas e hospitais.</p>
             <p>Atualmente, meu portfólio de serviços freelancer está em fase de estruturação. Em breve, esta página será atualizada com novos projetos e conteúdos relevantes.</p>
@@ -143,12 +145,12 @@
                     <input type="text" id="telefone" name="telefone" maxlength="20" pattern="^(\+55\s?)?(\(?\d{1,3}\)?)\s?9?\s?\d{4}([\s\-]?)\d{4}$" placeholder="11 98888 7777" autocomplete="tel" required>
                 </div>
                 <br>
-                <label for="modalidade">Pessoa:<span>*</span>  </label>
+                <label for="pessoa">Pessoa:<span>*</span>  </label>
                 <input type="radio" id="pessoa" name="pessoa" value="física" required>Física
                 <input type="radio" id="pessoa" name="pessoa" value="jurídica" required>Jurídica
                 <br><br>
                 <div>
-                    <label for="horario">Melhor horário de contato:<span>*</span> </label>
+                    <label for="horário">Melhor horário de contato:<span>*</span> </label>
                     <input type="time" id="horário" name="horário" required>
                 </div>
                 <br>
@@ -169,7 +171,7 @@
                 <br><br>
                 <label for="descrição">Dê uma breve descrição do serviço:<span>*</span> </label>
                 <br><div style="margin-bottom: 0.5em;"></div>
-                <textarea name="descrição" id="desc" maxlength="384" style="min-height: 3lh; field-sizing: content; word-break: break-all; resize: none; box-sizing: border-box; border: 2px inset gray;"></textarea>
+                <textarea name="descrição" id="descrição" maxlength="384" style="min-height: 3lh; field-sizing: content; word-break: break-all; resize: none; box-sizing: border-box; border: 2px inset gray;"></textarea>
                 <br><br><br>
                 <div style="gap: 2em; justify-content: center;">
                     <input type="submit" value="Enviar">
@@ -178,9 +180,10 @@
             </form>
         </section>
     </main>
-    <hr style="margin: auto 0 0; border-color: gray;">
     <footer>
-        <p style="text-align: center;"><span id="ano"></span> - LG Ribeiro</p>
+        <hr style="margin: auto 0 0; border-color: gray;">
+        <p style="text-align: center; margin-bottom: 0;"><span id="ano"></span> - LG Ribeiro</p>
+        <p style="text-align: center; margin-top: 0;">luizgrs97@gmai.com</p>
     </footer>
     <script src="./src/script.js"></script>
 </body>
