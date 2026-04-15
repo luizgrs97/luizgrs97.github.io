@@ -9,16 +9,17 @@ window.addEventListener("load", () => {
 });
 
 function turn(btn_id, sec_id) {
-	document.querySelectorAll("section, button").forEach(element => {
-		element.classList.remove("visible");
-	});
-	btn_id.classList.add("visible");
-	document.getElementById(sec_id).classList.add("visible");
-	localStorage.setItem("LastSection", sec_id);
-	window.scrollTo({
+    lastsec = localStorage.getItem("LastSection");
+    document.querySelectorAll("section, button").forEach(element => {
+     	 element.classList.remove("visible");
+    });
+    btn_id.classList.add("visible");
+    document.getElementById(sec_id).classList.add("visible");
+    localStorage.setItem("LastSection", sec_id);
+    window.scrollTo({
 		top: 0,
-		behavior: "smooth"
-	});
+		behavior: (sec_id === lastsec) ? "smooth" : "auto"
+    });
 };
 
 window.onload = () => {
