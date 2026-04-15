@@ -1,3 +1,5 @@
+/* Configurações de carregamento, página só exibe se o javascript estiver ativo */
+
 window.addEventListener('load', function() {
     document.querySelector('body').style.display = 'flex';
 });
@@ -7,6 +9,8 @@ window.addEventListener("load", () => {
         document.querySelector("main").classList.add("transition");
     }, 500);
 });
+
+/* Troca de "página" via javascript */
 
 function turn(btn_id, sec_id) {
     lastsec = localStorage.getItem("LastSection");
@@ -30,6 +34,8 @@ window.onload = () => {
     }
 };
 
+/* Idade/Ano */
+
 hoje = new Date();
 
 idade = hoje.getFullYear() - 2003;
@@ -45,6 +51,8 @@ var ano = hoje.getFullYear();
 if (ano) {
 document.getElementById("ano").textContent = ano;
 };
+
+/* Text Area */
 
 const textarea = document.querySelector("textarea");
 
